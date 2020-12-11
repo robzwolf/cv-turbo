@@ -27,7 +27,7 @@ class CV extends React.Component {
                         <ProfileStatement>
                             {data.profileStatement}
                         </ProfileStatement>
-                        {data.sections && data.sections.map((section) => <Section data={section} />)}
+                        {data.sections && data.sections.map((section) => <Section data={section} key={section.sectionTitle} />)}
                     </main>
                 </div>
                 <Form schema={cvSchema.jsonSchema} uiSchema={cvSchema.uiSchema} />

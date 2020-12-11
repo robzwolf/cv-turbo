@@ -10,7 +10,7 @@ export default class Section extends React.Component {
                 <SectionTitle>
                     {data.sectionTitle}
                 </SectionTitle>
-                {data.activities && data.activities.map((activity) => <Activity data={activity} />)}
+                {data.activities && data.activities.map((activity) => <Activity data={activity} key={activity.activityTitle} />)}
             </>
         )
     }
