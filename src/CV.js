@@ -20,13 +20,25 @@ class CV extends React.Component {
         const builder = new CVSchemaBuilder(preloadedFormData);
         builder.buildSchema();
 
-        this.cvSchema = builder.getSchema();
-        console.log(this.cvSchema);
+        const formSchema = builder.getSchema();
+        this.formSchema = {
+            "jsonSchema": formSchema.jsonSchema,
+            "uiSchema": formSchema.uiSchema
+        }
+
+        this.state = {
+            formData: formSchema.formData
+        }
     }
 
+    updateFormData(e) {
+        this.setState({formData: e.formData});
+    }
+
+
     render() {
-        const {cvSchema} = this;
-        const {formData: data} = cvSchema;
+        const {formSchema} = this;
+        const {formData: data} = this.state;
         return (
             <>
                 {data && <div className="CV">
@@ -40,7 +52,13 @@ class CV extends React.Component {
                         {data.sections && data.sections.map((section) => <Section data={section} key={section.sectionTitle} />)}
                     </main>
                 </div>}
-                <Form schema={cvSchema.jsonSchema} uiSchema={cvSchema.uiSchema} formData={data} />
+                <Form
+                    onChange={e => {this.updateFormData(e)}}
+                    className="CVBuilderForm"
+                    schema={formSchema.jsonSchema}
+                    uiSchema={formSchema.uiSchema}
+                    formData={data}
+                />
             </>
         );
     }

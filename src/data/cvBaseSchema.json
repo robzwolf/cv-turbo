@@ -47,8 +47,6 @@
       }
     }
   },
-  "uiSchema": {
-    "className": "cv-builder-form"
-  },
+  "uiSchema": {},
   "formData": {}
 }
