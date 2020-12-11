@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
 
 import './ActivityMeta.scss';
+import Dates from "./Dates";
 
 export default function ActivityMeta(props) {
     const {data} = props;
@@ -33,9 +34,27 @@ export default function ActivityMeta(props) {
     }
 
     if (data.activityTitle) {
-        subtitle = `${data.activityLocation} | ${activityDates}`;
+        subtitle = (
+            <>
+                <span>
+                    {data.activityLocation}
+                </span>
+                <span>
+                    {` | `}
+                </span>
+                <Dates>
+                    {activityDates}
+                </Dates>
+            </>
+        )
     } else {
-        subtitle = activityDates;
+        subtitle = (
+            <>
+                <Dates>
+                    {activityDates}
+                </Dates>
+            </>
+        )
     }
 
     return (
