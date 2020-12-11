@@ -37,6 +37,11 @@
                     "title": "Entry Location",
                     "description": "e.g. Lorem Ipsum University or Super Company Ltd, London"
                   },
+                  "description": {
+                    "type": "string",
+                    "title": "Description",
+                    "description": "Write a couple of sentences about this entry. Markdown is supported."
+                  },
                   "activityStart": "to-be-replaced",
                   "activityEnd": "to-be-replaced"
                 }
@@ -47,6 +52,22 @@
       }
     }
   },
-  "uiSchema": {},
+  "uiSchema": {
+    "profileStatement": {
+      "ui:widget": "textarea",
+      "ui:rows": 3
+    },
+    "sections": {
+      "items": {
+        "activities": {
+          "items": {
+            "description": {
+              "ui:widget": "textarea"
+            }
+          }
+        }
+      }
+    }
+  },
   "formData": {}
 }
