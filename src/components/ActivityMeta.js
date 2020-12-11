@@ -1,5 +1,3 @@
-import dayjs from "dayjs";
-
 import './ActivityMeta.scss';
 import Dates from "./Dates";
 
