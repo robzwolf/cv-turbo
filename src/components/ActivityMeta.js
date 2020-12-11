@@ -17,22 +17,6 @@ export default function ActivityMeta(props) {
         title = "";
     }
 
-    const dateFormat = "MMM YYYY";
-    let startMonth;
-    try {
-        startMonth = dayjs(data.activityStartTime).format(dateFormat);
-    } catch {}
-
-    let endMonth;
-    try {
-        endMonth = dayjs(data.activityEndTime).format(dateFormat);
-    } catch {}
-
-    let activityDates;
-    if (startMonth && endMonth) {
-        activityDates = `${startMonth} – ${endMonth}`
-    }
-
     if (data.activityTitle) {
         subtitle = (
             <>
@@ -42,17 +26,13 @@ export default function ActivityMeta(props) {
                 <span>
                     {` | `}
                 </span>
-                <Dates>
-                    {activityDates}
-                </Dates>
+                <Dates startTime={data.activityStartTime} endTime={data.activityEndTime} />
             </>
         )
     } else {
         subtitle = (
             <>
-                <Dates>
-                    {activityDates}
-                </Dates>
+                <Dates startTime={data.activityStartTime} endTime={data.activityEndTime} />
             </>
         )
     }

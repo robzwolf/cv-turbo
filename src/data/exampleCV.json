@@ -45,6 +45,13 @@
                         "activityStartTime": "2018-07-01T00:00:00.000Z",
                         "activityEndTime": "2018-09-01T00:00:00.000Z",
                         "description": "Received training in Latin, ancient Latin, classical Latin, other Latin, more Latin, extra Latin, additional Latin and super Latin."
+                    },
+                    {
+                        "activityTitle": "Latin Development and Marketing (Internship)",
+                        "activityLocation": "Roman College, Lorem Ipsum University",
+                        "activityStartTime": "2019-07-01T00:00:00.000Z",
+                        "activityEndTime": "2019-09-01T00:00:00.000Z",
+                        "description": "Championed key project and redeveloped library resources in accordance with university development guidelines. Collaborated across departments to collate content."
                     }
                 ]
             }
