@@ -3,7 +3,7 @@ import "./MarkdownText.scss";
 
 export default function MarkdownText(props) {
     return (
-        <div className="markdown-formatted-text">
+        <div className="MarkdownText">
             <ReactMarkdown>{props.children}</ReactMarkdown>
         </div>
     )

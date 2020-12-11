@@ -1,29 +1,31 @@
 .CV {
-  text-align: center;
-  height: 100vh;
-  width: 100vw;
-  place-content: center;
-  display: grid;
+    padding: 50px;
 }
 
 main {
-  // Width and height in millimetres
-  --page-width: 100;
-  --page-height: 100;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10pt;
+    padding: 20mm 25.4mm;
 
-  // Ratio of millimetres to pixels, e.g. 0.5 means 210mm translates to 105px
-  --base-scale: 2px;
+    // Width and height in millimetres
+    // (default)
+    --page-width: 100;
+    --page-height: 100;
 
-  margin: auto;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  width: calc(var(--page-width) * var(--base-scale));
-  height: calc(var(--page-height) * var(--base-scale));
+    // Ratio of millimetres to pixels, e.g. 0.5 means 210mm translates to 105px
+    --base-scale: 1mm;
 
-  &.a4 {
-    --page-width: 210;
-    --page-height: 297;
-  }
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: calc(var(--page-width) * var(--base-scale));
+    height: calc(var(--page-height) * var(--base-scale));
+    box-sizing: border-box;
+
+    &.a4 {
+        --page-width: 210;
+        --page-height: 297;
+    }
 
 }
 

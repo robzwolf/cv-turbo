@@ -1,5 +1,7 @@
 import dayjs from "dayjs";
 
+import './ActivityMeta.scss';
+
 export default function ActivityMeta(props) {
     const {data} = props;
 

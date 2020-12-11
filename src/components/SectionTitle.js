@@ -1,3 +1,5 @@
+import './SectionTitle.scss'
+
 export default function SectionTitle(props) {
     return (
         <h2 className="SectionTitle">

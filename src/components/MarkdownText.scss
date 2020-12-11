@@ -1,3 +1,8 @@
-.markdown-formatted-text {
+.MarkdownText {
     white-space: pre-line;
+    margin-bottom: 18pt;
+
+    & > :first-child {
+        margin-top: 0;
+    }
 }

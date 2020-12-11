@@ -1,9 +1,9 @@
+import "./Title.scss";
+
 export default function Title(props) {
     return (
-        <div className="title">
-            <h1>
-                {props.children}
-            </h1>
-        </div>
+        <h1 className="Title">
+            {props.children}
+        </h1>
     )
 }
