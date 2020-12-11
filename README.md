@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# CV Turbo
+
+Enter your details and watch a beautiful CV get created!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
