@@ -1,0 +1,46 @@
+{
+  "jsonSchema": {
+    "properties": {
+      "title": {
+        "type": "string",
+        "title": "Your Name"
+      },
+      "profileStatement": {
+        "type": "string",
+        "title": "Profile Statement",
+        "description": "Write a couple of sentences about yourself here."
+      },
+      "sections": {
+        "type": "array",
+        "title": "Sections",
+        "items": {
+          "type": "object",
+          "properties": {
+            "sectionTitle": {
+              "type": "string",
+              "title": "Section Title",
+              "description": "e.g. Education or Work Experience"
+            },
+            "activities": {
+              "type": "array",
+              "title": "Entries",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "activityTitle": {
+                    "type": "string",
+                    "title": "Entry Title",
+                    "description": "e.g. degree title or job title"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "uiSchema": {
+    "className": "cv-builder-form"
+  }
+}
