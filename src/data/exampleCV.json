@@ -23,7 +23,30 @@
                 ]
             },
             {
-                "sectionTitle": "Full-Time Work Experience"
+                "sectionTitle": "Full-Time Work Experience",
+                "activities": [
+                    {
+                        "activityTitle": "Latin Consultant",
+                        "activityLocation": "Caesar & Caesar, London",
+                        "activityStartTime": "2021-09-01T00:00:00.000Z",
+                        "activityEndTime": "",
+                        "description": "Starting in September 2021, will work as part of a team of Latin consultants on-site at customers and together with customers businesses and Latin specialists to help them achieve their desired business outcomes quickly. Will teach and coach customer teams and external partners in how to best use Latin."
+                    },
+                    {
+                        "activityTitle": "Junior Latin Researcher (Industrial Placement Year)",
+                        "activityLocation": "Dragon Research, Newcastle",
+                        "activityStartTime": "2019-09-01T00:00:00.000Z",
+                        "activityEndTime": "2020-08-01T00:00:00.000Z",
+                        "description": "Latin research with books, libraries, research papers. Researched Latin with numerous sources and cross-checked against published papers and academic journals."
+                    },
+                    {
+                        "activityTitle": "Latin Research Insight Programme",
+                        "activityLocation": "Civil Service, London",
+                        "activityStartTime": "2018-07-01T00:00:00.000Z",
+                        "activityEndTime": "2018-09-01T00:00:00.000Z",
+                        "description": "Received training in Latin, ancient Latin, classical Latin, other Latin, more Latin, extra Latin, additional Latin and super Latin."
+                    }
+                ]
             }
         ]
     }
