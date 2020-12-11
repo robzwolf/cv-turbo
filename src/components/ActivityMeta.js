@@ -24,13 +24,13 @@ export default function ActivityMeta(props) {
                 <span>
                     {` | `}
                 </span>
-                <Dates startTime={data.activityStartTime} endTime={data.activityEndTime} />
+                <Dates start={data.activityStart} end={data.activityEnd} />
             </>
         )
     } else {
         subtitle = (
             <>
-                <Dates startTime={data.activityStartTime} endTime={data.activityEndTime} />
+                <Dates start={data.activityStart} end={data.activityEnd} />
             </>
         )
     }

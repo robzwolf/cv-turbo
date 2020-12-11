@@ -12,7 +12,7 @@ class CV extends React.Component {
     constructor(props) {
         super(props);
 
-        this.cvData = exampleCV.cv;
+        this.cvData = exampleCV;
     }
 
     render() {
@@ -30,7 +30,7 @@ class CV extends React.Component {
                         {data.sections && data.sections.map((section) => <Section data={section} key={section.sectionTitle} />)}
                     </main>
                 </div>
-                <Form schema={cvSchema.jsonSchema} uiSchema={cvSchema.uiSchema} />
+                <Form schema={cvSchema.jsonSchema} uiSchema={cvSchema.uiSchema} formData={cvSchema.formData} />
             </>
         );
     }

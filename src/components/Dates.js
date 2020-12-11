@@ -2,18 +2,18 @@ import './Dates.scss';
 import dayjs from "dayjs";
 
 export default function Dates(props) {
-    function formatDateAsMonth(dateString) {
+    function formatDateAsMonth(year, month) {
         const dateFormat = "MMM YYYY";
 
-        let month = dayjs(dateString).format(dateFormat);
-        month = (month === "Invalid Date") ? "" : month;
+        let formattedMonthYear = dayjs(year, month).format(dateFormat);
+        formattedMonthYear = (formattedMonthYear === "Invalid Date") ? "" : formattedMonthYear;
 
-        return month;
+        return formattedMonthYear;
     }
 
-
-    const startMonth = formatDateAsMonth(props.startTime);
-    const endMonth = formatDateAsMonth(props.endTime);
+    const {start,end} = props;
+    const startMonth = formatDateAsMonth(start.year, start.month);
+    const endMonth = formatDateAsMonth(end.year, end.month);
 
     let formattedWhen;
     if (startMonth && endMonth) {

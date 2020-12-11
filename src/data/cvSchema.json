@@ -31,6 +31,45 @@
                     "type": "string",
                     "title": "Entry Title",
                     "description": "e.g. degree title or job title"
+                  },
+                  "activityLocation": {
+                    "type": "string",
+                    "title": "Entry Location",
+                    "description": "e.g. Lorem Ipsum University or Super Company Ltd, London"
+                  },
+                  "activityStart": {
+                    "type": "object",
+                    "title": "Start Date",
+                    "properties": {
+                      "year": {
+                        "type": "string",
+                        "title": "Year",
+                        "enum": [1900, 1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909, 1910, 1911, 1912, 1913, 1914, 1915, 1916, 1917, 1918, 1919, 1920, 1921, 1922, 1923, 1924, 1925, 1926, 1927, 1928, 1929, 1930, 1931, 1932, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1942, 1943, 1944, 1945, 1946, 1947, 1948, 1949, 1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035, 2036, 2037, 2038, 2039, 2040]
+                      },
+                      "month": {
+                        "type": "string",
+                        "title": "Month",
+                        "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                        "enumNames": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+                      }
+                    }
+                  },
+                  "activityEnd": {
+                    "type": "object",
+                    "title": "End Date",
+                    "properties": {
+                      "year": {
+                        "type": "string",
+                        "title": "Year",
+                        "enum": [1900, 1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909, 1910, 1911, 1912, 1913, 1914, 1915, 1916, 1917, 1918, 1919, 1920, 1921, 1922, 1923, 1924, 1925, 1926, 1927, 1928, 1929, 1930, 1931, 1932, 1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940, 1941, 1942, 1943, 1944, 1945, 1946, 1947, 1948, 1949, 1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035, 2036, 2037, 2038, 2039, 2040]
+                      },
+                      "month": {
+                        "type": "string",
+                        "title": "Month",
+                        "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                        "enumNames": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+                      }
+                    }
                   }
                 }
               }
@@ -42,5 +81,63 @@
   },
   "uiSchema": {
     "className": "cv-builder-form"
+  },
+  "formData": {
+    "title": "Bill L. Atin",
+    "profileStatement": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "sections": [
+      {
+        "sectionTitle": "Education",
+        "activities": [
+          {
+            "activityTitle": "BSc Latin Studies",
+            "activityLocation": "Lorem Ipsum University",
+            "activityStart": {"year": 2017, "month": 9},
+            "activityEnd": {"year": 2021, "month": 8},
+            "description": "Achieved a 1st in first year. Modules include Ancient Latin, Latin Language, Linguistics Through the Ages and English Etymology. Expected to graduate with a 2:1."
+          },
+          {
+            "activityTitle": "",
+            "activityLocation": "Lorem Ipsum School, Loremville",
+            "activityStart": {"year": 2010, "month": 8},
+            "activityEnd": {"year": 2017, "month": 5},
+            "description": "**A Levels:** Latin (A*), Further Latin (A*), Additional Further Latin (A)\n**GCSEs:** 11 Grade A* including Maths and English"
+          }
+        ]
+      },
+      {
+        "sectionTitle": "Full-Time Work Experience",
+        "activities": [
+          {
+            "activityTitle": "Latin Consultant",
+            "activityLocation": "Caesar & Caesar, London",
+            "activityStart": {"year": 2020, "month": 8},
+            "activityEnd": {"year": "", "month": ""},
+            "description": "Starting in September 2021, will work as part of a team of Latin consultants on-site at customers and together with customers businesses and Latin specialists to help them achieve their desired business outcomes quickly. Will teach and coach customer teams and external partners in how to best use Latin."
+          },
+          {
+            "activityTitle": "Junior Latin Researcher (Industrial Placement Year)",
+            "activityLocation": "Dragon Research, Newcastle",
+            "activityStart":{"year": 2019, "month": 8},
+            "activityEnd": {"year": 2020, "month": 7},
+            "description": "Latin research with books, libraries, research papers. Researched Latin with numerous sources and cross-checked against published papers and academic journals."
+          },
+          {
+            "activityTitle": "Latin Research Insight Programme",
+            "activityLocation": "Civil Service, London",
+            "activityStart": {"year": 2018, "month": 6},
+            "activityEnd": {"year": 2018, "month": 8},
+            "description": "Received training in Latin, ancient Latin, classical Latin, other Latin, more Latin, extra Latin, additional Latin and super Latin."
+          },
+          {
+            "activityTitle": "Latin Development and Marketing (Internship)",
+            "activityLocation": "Roman College, Lorem Ipsum University",
+            "activityStart": {"year": 2019, "month": 6},
+            "activityEnd": {"year": 2019, "month": 8},
+            "description": "Championed key project and redeveloped library resources in accordance with university development guidelines. Collaborated across departments to collate content."
+          }
+        ]
+      }
+    ]
   }
 }
