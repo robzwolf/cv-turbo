@@ -1,0 +1,30 @@
+{
+    "cv": {
+        "title": "Robbie Jakob-Whitworth",
+        "profileStatement": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "sections": [
+            {
+                "sectionTitle": "Education",
+                "activities": [
+                    {
+                        "activityTitle": "BSc Latin Studies",
+                        "activityLocation": "Lorem Ipsum University",
+                        "activityStartTime": "2017-10-01T00:00:00.000Z",
+                        "activityEndTime": "2021-09-01T00:00:00.000Z",
+                        "description": "Achieved a 1st in first year. Modules include Ancient Latin, Latin Language, Linguistics Through the Ages and English Etymology. Expected to graduate with a 2:1."
+                    },
+                    {
+                        "activityTitle": "",
+                        "activityLocation": "Lorem Ipsum School, Loremville",
+                        "activityStartTime": "2010-09-01T00:00:00.000Z",
+                        "activityEndTime": "2017-06-01T00:00:00.000Z",
+                        "description": "**A Levels:** Latin (A*), Further Latin (A*), Additional Further Latin (A)\n**GCSEs:** 11 Grade A* including Maths and English"
+                    }
+                ]
+            },
+            {
+                "sectionTitle": "Full-Time Work Experience"
+            }
+        ]
+    }
+}
