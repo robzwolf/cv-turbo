@@ -5,9 +5,7 @@ import CV from './CV';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <CV />
-  </React.StrictMode>,
+  <CV />,
   document.getElementById('root')
 );
 
