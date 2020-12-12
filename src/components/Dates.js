@@ -1,11 +1,17 @@
 import './Dates.scss';
 import dayjs from "dayjs";
+import customParseFormat from "dayjs/plugin/customParseFormat";
 import utc from "dayjs/plugin/utc";
 
+dayjs.extend(customParseFormat);
 dayjs.extend(utc);
 const djs = dayjs.utc;
 
 export default function Dates(props) {
+    const monthDateFormat = "MMM";
+    const yearDateFormat = "YYYY";
+    const fullDateFormat = `${monthDateFormat} ${yearDateFormat}`;
+
     function _dateComponentIsValid(component) {
         if (typeof component !== "number") {
             return false;
@@ -19,10 +25,6 @@ export default function Dates(props) {
     }
 
     function formatDateAsMonth(year, month) {
-        const monthDateFormat = "MMM";
-        const yearDateFormat = "YYYY";
-        const fullDateFormat = `${monthDateFormat} ${yearDateFormat}`;
-
         const _ok = _dateComponentIsValid;
 
         let formattedDate = "";
@@ -53,7 +55,14 @@ export default function Dates(props) {
         formattedWhen = `${startMonth} – ${endMonth}`
     } else if (startMonth && !endMonth) {
         // If there is no provided end month but there is a start month then it is "to present"
-        formattedWhen = `${startMonth} – Present`;
+        // ...if the start month is not in the future
+        // else if the start month is in the future then it's "expected"
+
+        if (djs(startMonth, [fullDateFormat, yearDateFormat, monthDateFormat]).isAfter(djs(), "month")) {
+            formattedWhen = `${startMonth} (Expected)`
+        } else {
+            formattedWhen = `${startMonth} – Present`;
+        }
     } else if (!startMonth && endMonth) {
         // If there is no start month but there is an end month then assume the event only belongs in that month
         formattedWhen = endMonth;
