@@ -7,6 +7,7 @@ import Section from "./components/Section";
 import Form from "@rjsf/material-ui";
 import CVSchemaBuilder from "./components/CVSchemaBuilder";
 import exampleFormData from "./data/exampleCV.json";
+import CVWeb from "./components/CVWeb";
 
 class CV extends React.Component {
     constructor(props) {
@@ -41,17 +42,7 @@ class CV extends React.Component {
         const {formData: data} = this.state;
         return (
             <>
-                {data && <div className="CV">
-                    <main className="a4">
-                        <Title>
-                            {data.title}
-                        </Title>
-                        <ProfileStatement>
-                            {data.profileStatement}
-                        </ProfileStatement>
-                        {data.sections && data.sections.map((section) => <Section data={section} key={section.sectionTitle} />)}
-                    </main>
-                </div>}
+                {data && <CVWeb data={data} />}
                 <Form
                     onChange={e => {this.updateFormData(e)}}
                     className="CVBuilderForm"
