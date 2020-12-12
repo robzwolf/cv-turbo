@@ -1,13 +1,11 @@
 import './CV.scss';
 
-import Title from "./components/Title";
-import ProfileStatement from "./components/ProfileStatement";
 import React from "react";
-import Section from "./components/Section";
 import Form from "@rjsf/material-ui";
 import CVSchemaBuilder from "./components/CVSchemaBuilder";
 import exampleFormData from "./data/exampleCV.json";
-import CVWeb from "./components/CVWeb";
+import CVMarkup from "./components/CVMarkup";
+import CVPDFButton from "./components/CVPDFButton";
 
 class CV extends React.Component {
     constructor(props) {
@@ -16,7 +14,7 @@ class CV extends React.Component {
         let preloadedFormData;
 
         // Uncomment this line to use example form data
-        // preloadedFormData = exampleFormData;
+        preloadedFormData = exampleFormData;
 
         const builder = new CVSchemaBuilder(preloadedFormData);
         builder.buildSchema();
@@ -42,7 +40,8 @@ class CV extends React.Component {
         const {formData: data} = this.state;
         return (
             <>
-                {data && <CVWeb data={data} />}
+                {<CVPDFButton />}
+                {data && <CVMarkup data={data} />}
                 <Form
                     onChange={e => {this.updateFormData(e)}}
                     className="CVBuilderForm"

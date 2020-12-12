@@ -3,7 +3,7 @@ import ProfileStatement from "./ProfileStatement";
 import Section from "./Section";
 import React from "react";
 
-export default function CVWeb(props) {
+export default function CVMarkup(props) {
     const {data} = props;
     return (
         <div className="CV">
