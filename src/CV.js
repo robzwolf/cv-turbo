@@ -40,7 +40,7 @@ class CV extends React.Component {
         const {formData: data} = this.state;
         return (
             <>
-                {<CVPDFButton />}
+                {data && <CVPDFButton data={data} />}
                 {data && <CVMarkup data={data} />}
                 <Form
                     onChange={e => {this.updateFormData(e)}}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Page, Text, View, Document, StyleSheet, PDFDownloadLink } from '@react-pdf/renderer';
+import sanitize from "sanitize-filename";
 
 // Create styles
 const styles = StyleSheet.create({
@@ -28,14 +29,16 @@ const CVPDFDocument = () => (
     </Document>
 );
 
+const generateFileName = (data) => `${sanitize(data.title)} - CV.pdf`
 
 
-export default function CVPDFButton() {
+export default function CVPDFButton(props) {
+    const {data} = props;
     return (
         <div className="CVPDFButton">
             <PDFDownloadLink
                 document={<CVPDFDocument />}
-                fileName={"cv.pdf"}
+                fileName={generateFileName(data)}
             >
                 Download as PDF
             </PDFDownloadLink>
