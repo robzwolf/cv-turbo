@@ -21,9 +21,6 @@ export default function ActivityMeta(props) {
                 <span>
                     {data.activityLocation}
                 </span>
-                <span>
-                    {` | `}
-                </span>
                 <Dates start={data.activityStart} end={data.activityEnd} />
             </>
         )

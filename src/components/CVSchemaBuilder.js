@@ -12,7 +12,7 @@ class CVSchemaBuilder {
         if (!label) {
             label = "Date";
         }
-        const years = [];
+        const years = ["(blank)"];
         const howFarInTheFutureToGo = 30;
         for (let i = 1900; i <= (new Date().getUTCFullYear() + howFarInTheFutureToGo); i++) {
             years.push(i)
@@ -30,8 +30,8 @@ class CVSchemaBuilder {
                 "month": {
                     "type": "string",
                     "title": "Month",
-                    "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-                    "enumNames": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+                    "enum": ["(blank)", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                    "enumNames": ["(blank)", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
                 }
             }
         };
