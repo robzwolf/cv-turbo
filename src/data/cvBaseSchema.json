@@ -8,7 +8,7 @@
       "profileStatement": {
         "type": "string",
         "title": "Profile Statement",
-        "description": "Write a couple of sentences about yourself here."
+        "description": "Write a couple of sentences about yourself here. GitHub-Flavored Markdown is supported."
       },
       "sections": {
         "type": "array",
@@ -40,7 +40,7 @@
                   "description": {
                     "type": "string",
                     "title": "Description",
-                    "description": "Write a couple of sentences about this entry. Markdown is supported."
+                    "description": "Write a couple of sentences about this entry. GitHub-Flavored Markdown is supported."
                   },
                   "activityStart": "to-be-replaced",
                   "activityEnd": "to-be-replaced"
