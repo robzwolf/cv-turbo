@@ -48,7 +48,9 @@ class CVSchemaBuilder {
         objectDeepReplace(schema.jsonSchema, keysToReplace);
 
         // Copy over form data
-        schema.formData = this.formData;
+        if (this.formData) {
+            schema.formData = this.formData;
+        }
 
         this.finalSchema = schema;
     }
