@@ -1,5 +1,5 @@
 import React from 'react';
-import { pdf, Page, Text, View, Document, StyleSheet, PDFDownloadLink } from '@react-pdf/renderer';
+import { pdf, Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 import Button from '@material-ui/core/Button';
 import sanitize from "sanitize-filename";
 
@@ -66,10 +66,13 @@ export default function CVPDFButton(props) {
 
     return (
         <div className="CVPDFButton">
-            <Button onClick={() => {showFile(data)}}>
+            <Button
+                variant="contained"
+                color="primary"
+                onClick={() => {showFile(data)}}
+            >
                 Download as PDF
             </Button>
-
         </div>
     )
 };
