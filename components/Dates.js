@@ -1,4 +1,4 @@
-import './Dates.scss';
+import dateStyles from "../styles/Dates.module.scss";
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 import utc from "dayjs/plugin/utc";
@@ -43,7 +43,7 @@ export default function Dates(props) {
         return formattedDate;
     }
 
-    const {start,end} = props;
+    const {start,end,cn} = props;
     const startMonth = formatDateAsMonth(start.year, start.month);
     const endMonth = formatDateAsMonth(end.year, end.month);
 
@@ -69,7 +69,7 @@ export default function Dates(props) {
     }
 
     return (
-        <span className="Dates">
+        <span className={`${dateStyles.Dates} ${cn}`}>
             {formattedWhen}
         </span>
     )

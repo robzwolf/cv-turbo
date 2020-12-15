@@ -1,4 +1,4 @@
-import './ActivityMeta.scss';
+import activityMetaStyles from '../styles/ActivityMeta.module.scss';
 import Dates from "./Dates";
 
 export default function ActivityMeta(props) {
@@ -21,21 +21,21 @@ export default function ActivityMeta(props) {
                 <span>
                     {data.activityLocation}
                 </span>
-                <Dates start={data.activityStart} end={data.activityEnd} />
+                <Dates start={data.activityStart} end={data.activityEnd} cn={activityMetaStyles.Dates} />
             </>
         )
     } else {
         subtitle = (
             <>
-                <Dates start={data.activityStart} end={data.activityEnd} />
+                <Dates start={data.activityStart} end={data.activityEnd} cn={activityMetaStyles.Dates} />
             </>
         )
     }
 
     return (
         <>
-            <h3 className="ActivityTitle">{title}</h3>
-            <h4 className="ActivitySubtitle">{subtitle}</h4>
+            <h3 className={activityMetaStyles.ActivityTitle}>{title}</h3>
+            <h4 className={activityMetaStyles.ActivitySubtitle}>{subtitle}</h4>
         </>
     )
 }

@@ -2,7 +2,7 @@
     padding: 50px;
 }
 
-main {
+.main {
     font-family: 'Open Sans', sans-serif;
     font-size: 10pt;
     padding: 20mm 25.4mm;
@@ -15,7 +15,6 @@ main {
     // Ratio of millimetres to pixels, e.g. 0.5 means 210mm translates to 105px
     --base-scale: 1mm;
 
-    margin: auto;
     border: 1px solid #ccc;
     border-radius: 10px;
     width: calc(var(--page-width) * var(--base-scale));
@@ -26,7 +25,6 @@ main {
         --page-width: 210;
         --page-height: 297;
     }
-
 }
 
 .CVBuilderForm {

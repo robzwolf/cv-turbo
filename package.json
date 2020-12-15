@@ -8,8 +8,17 @@
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "@rjsf/core": "^2.4.0",
+    "@rjsf/material-ui": "^2.4.0",
+    "dayjs": "^1.9.7",
     "next": "10.0.3",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-markdown": "^5.0.3",
+    "remark-gfm": "^1.0.0",
+    "sanitize-filename": "^1.6.3",
+    "sass": "^1.30.0"
   }
 }

@@ -1,8 +1,8 @@
-import "./Title.scss";
+import styles from "../styles/Title.module.scss";
 
 export default function Title(props) {
     return (
-        <h1 className="Title">
+        <h1 className={styles.Title}>
             {props.children}
         </h1>
     )

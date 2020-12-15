@@ -1,11 +1,12 @@
-import './CV.scss';
+import styles from '../styles/CV.module.scss';
 
 import React from "react";
 import Form from "@rjsf/material-ui";
-import CVSchemaBuilder from "./components/CVSchemaBuilder";
-import exampleFormData from "./data/exampleCV.json";
-import CVMarkup from "./components/CVMarkup";
-import CVPDFButton from "./components/CVPDFButton";
+import CVSchemaBuilder from "./CVSchemaBuilder";
+import exampleFormData from "../data/exampleCV.json";
+import CVMarkup from "./CVMarkup";
+import CVPDFButton from "./CVPDFButton";
+import Layout from "./Layout";
 
 class CV extends React.Component {
     constructor(props) {
@@ -39,17 +40,17 @@ class CV extends React.Component {
         const {formSchema} = this;
         const {formData: data} = this.state;
         return (
-            <>
+            <Layout>
                 {data && <CVPDFButton data={data} />}
-                {data && <CVMarkup data={data} />}
+                {data && <CVMarkup data={data} className={`${styles.main} ${styles.a4}`} />}
                 <Form
                     onChange={e => {this.updateFormData(e)}}
-                    className="CVBuilderForm"
+                    className={styles.CVBuilderForm}
                     schema={formSchema.jsonSchema}
                     uiSchema={formSchema.uiSchema}
                     formData={data}
                 />
-            </>
+            </Layout>
         );
     }
 }

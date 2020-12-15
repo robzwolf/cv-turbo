@@ -1,8 +1,8 @@
-import './SectionTitle.scss'
+import styles from '../styles/SectionTitle.module.scss'
 
 export default function SectionTitle(props) {
     return (
-        <h2 className="SectionTitle">
+        <h2 className={styles.SectionTitle}>
             {props.children}
         </h2>
     )

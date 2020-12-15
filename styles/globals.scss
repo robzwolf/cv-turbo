@@ -4,7 +4,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
-  display: grid;
-  grid-template-columns: auto auto 1fr 20px;
+* {
+  box-sizing: border-box;
 }
