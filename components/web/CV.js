@@ -1,10 +1,10 @@
-import styles from '../styles/CV.module.scss';
+import styles from '../../styles/CV.module.scss';
 
 import React from "react";
 import Form from "@rjsf/material-ui";
 import CVSchemaBuilder from "./CVSchemaBuilder";
-import exampleFormData from "../data/exampleCV.json";
-import CVMarkup from "./CVMarkup";
+import exampleFormData from "../../data/exampleCV.json";
+import CVMarkup from "../CVMarkup";
 import CVPDFButton from "./CVPDFButton";
 import Layout from "./Layout";
 

@@ -1,5 +1,5 @@
-import baseSchema from "../data/cvBaseSchema.json";
-import objectDeepReplace from "./objectDeepReplace";
+import baseSchema from "../../data/cvBaseSchema.json";
+import objectDeepReplace from "../../utils/objectDeepReplace";
 
 class CVSchemaBuilder {
     constructor(formData) {

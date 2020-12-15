@@ -1,4 +1,4 @@
-import dateStyles from "../styles/Dates.module.scss";
+import dateStyles from "../../styles/Dates.module.scss";
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 import utc from "dayjs/plugin/utc";

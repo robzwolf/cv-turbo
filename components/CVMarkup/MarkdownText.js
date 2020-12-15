@@ -1,6 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import gfm from 'remark-gfm'
-import styles from "../styles/MarkdownText.module.scss";
+import styles from "../../styles/MarkdownText.module.scss";
 
 export default function MarkdownText(props) {
     return (

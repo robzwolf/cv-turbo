@@ -1,4 +1,4 @@
-import styles from "../styles/Title.module.scss";
+import styles from "../../styles/Title.module.scss";
 
 export default function Title(props) {
     return (

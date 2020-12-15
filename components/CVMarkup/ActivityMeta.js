@@ -1,4 +1,4 @@
-import activityMetaStyles from '../styles/ActivityMeta.module.scss';
+import activityMetaStyles from '../../styles/ActivityMeta.module.scss';
 import Dates from "./Dates";
 
 export default function ActivityMeta(props) {

@@ -1,4 +1,4 @@
-import CV from '../components/CV';
+import CV from '../components/web/CV';
 
 export default function Home() {
   return (
