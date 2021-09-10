@@ -59,11 +59,17 @@ export default function Home() {
                 .app {
                     display: grid;
                     grid-template-columns: auto auto 1fr 20px;
+                    max-height: 100vh;
+                }
+                
+                .CVBuilderForm {
+                    overflow-y: scroll;
+                    height: 100vh;
                 }
                 
                 .CVBuilderForm textarea {
-                        font-family: 'Roboto Mono', monospace;
-                        font-size: 80%;
+                    font-family: 'Roboto Mono', monospace;
+                    font-size: 80%;
                 }
             `}</style>
         </>

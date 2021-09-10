@@ -22,6 +22,8 @@ export default function CVMarkup({ data }) {
             <style jsx>{`
                 .CV {
                     padding: 50px;
+                    overflow-y: scroll;
+                    height: 100vh;
                 }
                 
                 main {
