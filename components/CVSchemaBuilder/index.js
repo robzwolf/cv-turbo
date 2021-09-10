@@ -49,7 +49,6 @@ class CVSchemaBuilder {
 
         // Copy over form data
         if (this.formData) {
-            console.log("copying over formData:", this.formData);
             schema.formData = this.formData;
         }
 
