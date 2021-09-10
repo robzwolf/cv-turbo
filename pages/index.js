@@ -58,8 +58,11 @@ export default function Home() {
                 
                 .app {
                     display: grid;
-                    grid-template-columns: auto auto 1fr 20px;
+                    grid-template-columns: auto 1fr;
+                    grid-column-gap: 10px;
                     max-height: 100vh;
+                    width: calc(100vw - 20px);
+                    margin: 0 auto;
                 }
                 
                 .CVBuilderForm {
@@ -71,6 +74,12 @@ export default function Home() {
                     font-family: 'Roboto Mono', monospace;
                     font-size: 80%;
                 }
+                
+                //.MuiGrid-root {
+                //    margin-left: 0 !important;
+                //    margin-right: 0 !important;
+                //    width: 100% !important;
+                //}
             `}</style>
         </>
     )
