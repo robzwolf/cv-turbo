@@ -2,6 +2,7 @@ import exampleFormData from "../data/exampleCV.json";
 import CVSchemaBuilder from "../components/CVSchemaBuilder";
 import {useState} from "react";
 import Form from "@rjsf/material-ui";
+import CVMarkup from "../components/CVMarkup";
 
 export default function Home() {
     let preloadedFormData;
@@ -25,12 +26,15 @@ export default function Home() {
     }
 
     return (
-        <Form
-            onChange={e => {updateFormData(e)}}
-            className="CVBuilderForm"
-            schema={formSchema.jsonSchema}
-            uiSchema={formSchema.uiSchema}
-            formData={formData}
-        />
+        <>
+            {formData && <CVMarkup data={formData} />}
+            <Form
+                onChange={e => {updateFormData(e)}}
+                className="CVBuilderForm"
+                schema={formSchema.jsonSchema}
+                uiSchema={formSchema.uiSchema}
+                formData={formData}
+            />
+        </>
     )
 }
