@@ -37,13 +37,13 @@ export default function Home() {
             </Head>
             <div className="app">
                 {formData && <CVMarkup data={formData} />}
-                <Form
-                    onChange={e => {updateFormData(e)}}
-                    className="CVBuilderForm"
-                    schema={formSchema.jsonSchema}
-                    uiSchema={formSchema.uiSchema}
-                    formData={formData}
-                />
+                {/*<Form*/}
+                {/*    onChange={e => {updateFormData(e)}}*/}
+                {/*    className="CVBuilderForm"*/}
+                {/*    schema={formSchema.jsonSchema}*/}
+                {/*    uiSchema={formSchema.uiSchema}*/}
+                {/*    formData={formData}*/}
+                {/*/>*/}
             </div>
             <style jsx global>{`
                 body {

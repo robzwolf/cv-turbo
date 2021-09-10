@@ -7,8 +7,8 @@ export default function CVMarkup({ data }) {
     return (
         <>
             <div className="CV">
-                <main className="a4">
-                    <Title>
+                <main className="a4" tabIndex={0}>
+                    <Title tabIndex={1}>
                         {data.title}
                     </Title>
                     <ProfileStatement>
